@@ -1,0 +1,56 @@
+.ba-footer{
+	text-align: center;
+	color: $gray;
+	a{
+		color: $gray;
+		@include breakpoint(sm){
+			&:not(:first-child){
+				margin-left: 20px;
+			}
+
+		}
+	}
+		@include breakpoint(md){
+		text-align: right;
+	}
+		@include breakpoint(lg){
+		text-align: right;
+	}
+}
+.ba-footer-menu{
+	float: none;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+
+	@include breakpoint(sm){
+		flex-direction: row;
+		justify-content: center;
+
+	}
+	@include breakpoint(md){
+		justify-content: flex-start;
+
+	}
+	@include breakpoint(lg){
+		justify-content: flex-start;
+
+	}
+	li{
+		@include breakpoint(sm){
+			&:not(:first-child):before{
+				content: "-";
+			}
+
+		}
+		a{
+			color: $gray;
+			display: inline-block;
+			vertical-align: middle;
+			&:hover{
+				background: none;
+				color: $text-color;
+			}
+		}
+	}
+}
